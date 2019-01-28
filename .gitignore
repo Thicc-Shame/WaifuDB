@@ -1,0 +1,4 @@
+*.db
+
+ims/*
+node_modules/*

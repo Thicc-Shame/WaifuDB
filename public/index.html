@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html id="root">
+  <head>
+    <title>Weeb Development</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script type="text/javascript" src="login.js"></script>
+    <script type="text/javascript" src="waifuAjax.js"></script>
+    <style>
+      body{
+        background-color: #668866;
+        text-align: center;
+      }
+      div.w3-card {
+        position: absolute;
+        top: 25%;
+        left:35%;
+      }
+      button {
+        margin-bottom: 5%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="w3-card" style="width:30%;text-align: center;background-color: #559955;">
+      <header class="w3-container">
+        <h1>Log in</h1>
+    </header>
+      <label>Username</label>
+      <input id="u" class="w3-input" type="text" style="width:60%;margin-left:20%">
+
+      <label>Password</label>
+      <input id="p" class="w3-input" type="password" style="width:60%;margin-left:20%">
+
+      <label id="cl" style="display:none;">Confirm Password</label>
+      <input id="c" class="w3-input" type="password" style="display:none;width:60%;margin-left:20%">
+      <br>
+      <button id="loginButton" class="w3-button w3-black" onclick="login()">Log in</button>
+      <button id="accountButton" class="w3-button w3-black" onclick="createAccount()">Create Account</button>
+    </div>
+  </body>
+</html>

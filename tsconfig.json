@@ -1,0 +1,9 @@
+{
+  "files" : [
+            "public/waifuAjax.ts",
+            "public/login.ts"
+            ],
+  "compilerOptions" : {
+	"target" : "es2015"
+  }
+ }

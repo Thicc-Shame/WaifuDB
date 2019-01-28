@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Your Waifu is Shit</title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="waifuAjax.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1><a href="/">Waifu Database!</a></h1>
+      <p>Your waifu is shit, and I can prove it with my relational database.</p><hr>
+    </header>
+    <form class="w3-cell-row" style="width:50%">
+      <div class="w3-cell">
+        <label class="w3-text-blue" style="width:30%">Waifu Name</label>
+        <input id="name" class="w3-input" type="text" style="width:90%">
+
+        <label class="w3-text-blue" style="width:30%">Waifu Series</label>
+        <input id="series" class="w3-input" type="text" style="width:90%">
+      </div>
+      <div class="w3-card w3-cell" style="width:40%">
+        <h2>Waifu Stats</h2>
+        <label>Personality</label>
+        <input class="w3-check" type="checkbox" id="personalityCheck" onclick="scoreWaifu()">
+        <label>Skills</label>
+        <input class="w3-check" type="checkbox" id="skillCheck" onclick="scoreWaifu()">
+        <label>Appearance</label>
+        <input class="w3-check" type="checkbox" id="appearanceCheck" onclick="scoreWaifu()">
+        <label>Misc</label>
+        <input class="w3-check" type="checkbox" id="miscCheck" onclick="scoreWaifu()">
+        <label>Picture</label>
+        <input class="w3-check" type="checkbox" id="picCheck" onclick="scoreWaifu()">
+      </div>
+    </form>
+    <div class="w3-cell-row">
+      <div id="personalityInput" class="w3-card w3-cell" style="display:none;width:10%">
+        <h3>Personality [0-10]</h3>
+        <div class="w3-row-padding w3-light-grey" style="">
+          <div class="w3-fourth">
+            <input class="w3-input w3-border" id="caring" type="number" min="0" max="10" placeholder="Caring">
+          </div>
+          <div class="w3-fourth">
+            <input class="w3-input w3-border" id="reliable" type="number" min="0" max="10" placeholder="Reliable">
+          </div>
+          <div class="w3-fourth">
+            <input class="w3-input w3-border" id="entertaining" type="number" min="0" max="10" placeholder="Entertaining">
+          </div>
+          <div class="w3-fourth">
+            <input class="w3-input w3-border" id="impression" type="number" min="0" max="10" placeholder="Impression">
+          </div>
+        </div>
+      </div>
+
+      <div id="skillsInput" class="w3-card w3-cell" style="display:none;width:10%">
+        <h3>Skills [0-10]</h3>
+        <div class="w3-row-padding w3-light-grey" style="">
+          <div class="w3-fourth">
+            <input class="w3-input w3-border" id="combat" type="number" min="0" max="10" placeholder="Combat">
+          </div>
+          <div class="w3-fourth">
+            <input class="w3-input w3-border" id="int" type="number" min="0" max="10" placeholder="Intelligence">
+          </div>
+          <div class="w3-fourth">
+            <input class="w3-input w3-border" id="utility" type="number" min="0" max="10" placeholder="Utility">
+          </div>
+          <div class="w3-fourth">
+            <input class="w3-input w3-border" id="family" type="number" min="0" max="10" placeholder="Family">
+          </div>
+        </div>
+      </div>
+
+      <div id="appearanceInput" class="w3-card w3-cell" style="display:none;width:11%">
+        <h3>Appearance [0-10]</h3>
+        <div class="w3-row-padding w3-light-grey" style="">
+          <div class="w3-fifth">
+            <input class="w3-input w3-border" id="cute" type="number" min="0" max="10" placeholder="Cute">
+          </div>
+          <div class="w3-fifth">
+            <input class="w3-input w3-border" id="cool" type="number" min="0" max="10" placeholder="Cool">
+          </div>
+          <div class="w3-fifth">
+            <input class="w3-input w3-border" id="breasts" type="number" min="0" max="10" placeholder="Breats">
+          </div>
+          <div class="w3-fifth">
+            <input class="w3-input w3-border" id="ass" type="number" min="0" max="10" placeholder="Ass">
+          </div>
+          <div class="w3-fifth">
+            <input class="w3-input w3-border" id="attitude" type="number" min="0" max="10" placeholder="Attitude">
+          </div>
+        </div>
+      </div>
+
+      <div id="miscInput" class="w3-card w3-cell" style="display:none;width:10%">
+        <h3>Misc [0-10]</h3>
+        <div class="w3-row-padding w3-light-grey" style="">
+          <div class="w3-fourth">
+            <input class="w3-input w3-border" id="age" type="number" min="0" max="10" placeholder="Age Compatibility">
+          </div>
+          <div class="w3-fourth">
+            <input class="w3-input w3-border" id="meme" type="number" min="0" max="10" placeholder="Meme">
+          </div>
+        </div>
+      </div>
+
+      <div id="picInput" class="w3-card w3-cell" style="display:none;width:30%;">
+        <h3>Picture [Link]</h3>
+        <div class="w3-row-padding w3-light-grey" style="">
+          <div class="">
+            <input class="w3-input w3-border" id="link" type="text" placeholder="Link to picture">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w3-button w3-green" onclick="sendData()">Submit Waifu to Database</div>
+  </body>
+</html>
