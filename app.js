@@ -76,4 +76,11 @@ app.post('/create', function(req,res) {
   database.createUser(req.body.username,req.body.password);
 })
 
+app.get('/waifu/:name/:p/:s/:a/:m/:i', function(req,res) {
+  database.queryWaifu(req.params.name,req.params.p=="y",req.params.s=="y",req.params.a=="y",req.params.m=="y",req.params.i=="y").then(waifu => {
+    console.log(waifu);
+    res.send(waifu)
+  })
+})
+
 app.listen(8000, () => console.log("Running on port 8000!"));
